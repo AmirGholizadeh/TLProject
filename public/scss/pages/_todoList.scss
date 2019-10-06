@@ -1,0 +1,96 @@
+                                .tl {
+                                    &__container {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        margin: 0rem 20rem;
+                                        background: var(--white);
+                                        border-radius: 5px;
+                                        box-shadow: 0 0.5rem 2rem var(--gray);
+                                        padding: 1rem 2rem;
+                                        @media(max-width: 768px) {
+                                            margin: 0rem 5rem;
+                                        }
+                                        @media(max-width: 500px) {
+                                            margin: 0rem;
+                                            border-radius: 0;
+                                            display: block;
+                                        }
+                                        &:not(:last-child) {
+                                            margin-bottom: 2rem;
+                                        }
+                                    }
+                                    &__list {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        @media(max-width: 500px) {
+                                            margin-bottom: 1rem;
+                                            padding-bottom: 1rem;
+                                            border-bottom: 0.5px dotted var(--gray-light);
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            text-align: center;
+                                        }
+                                    }
+                                    &__item {
+                                        font-size: 1.5rem;
+                                        color: var(--gray);
+                                        font-weight: 500;
+                                        &:first-child {
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-right: 5rem;
+                                            @media(max-width: 768px) {
+                                                & {
+                                                    margin-right: 2rem;
+                                                }
+                                            }
+                                            @media(max-width:500px) {
+                                                & {
+                                                    margin-right: 0;
+                                                }
+                                            }
+                                        }
+                                        &--description {
+                                            color: var(--gray-light);
+                                            font-size: 1.2rem;
+                                        }
+                                        &--time {
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+                                    &__priority {
+                                        border-radius: 5px;
+                                        font-size: var(--font-five);
+                                        color: var(--white);
+                                        text-transform: uppercase;
+                                        padding: 0.5rem 1rem;
+                                        margin-left: 5rem;
+                                        @media(max-width: 768px) {
+                                            & {
+                                                margin-left: 2rem;
+                                            }
+                                        }
+                                        @media(max-width:500px) {
+                                            & {
+                                                margin-left: 0;
+                                            }
+                                        }
+                                        &--low {
+                                            background: var(--gray);
+                                        }
+                                        &--medium {
+                                            background: var(--primary-color-light);
+                                        }
+                                        &--high {
+                                            background: var(--primary-color-dark);
+                                        }
+                                        @media(max-width:500px) {
+                                            & {
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }

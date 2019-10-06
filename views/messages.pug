@@ -1,0 +1,11 @@
+extends base
+
+block content
+    .container
+        for message in user.messages
+            .messages
+                .messages__container
+                    .messages__header
+                        h1.messages__title= message.title
+                        h2.messages__from= `From ${message.from}`
+                    p.messages__message= message.message

@@ -1,0 +1,47 @@
+extends base
+mixin accounts(role)
+    ul.users__list(id = `${role._id}`)
+        li.users__item= `${role.name.split(' ')[0]} `
+        span &nbsp;
+        li.users__item= `${role.email} `
+        span &nbsp;
+        - const year = new Date(role.createdAt).getFullYear();
+        - const month = new Date(role.createdAt).getMonth() + 1;
+        - const day = new Date(role.createdAt).getDate();
+        - const hour = new Date(role.createdAt).getHours() + 1;
+        - const minute = new Date(role.createdAt).getMinutes() + 1;
+        - const second = new Date(role.createdAt).getSeconds() + 1;
+        li.users__item= ` ${year}/${month}/${day} at ${hour}:${minute}:${second}`
+        span &nbsp;
+        .actions
+            button.btn.btn--edit.edit-user edit
+            button.btn.btn--message.message-single send message
+
+block content
+    .container
+        form.form.form--user.form--message
+            .form__group
+                label.form__label(for='title') Title :
+                input.form__input#title(placeholder='title...')
+            .form__group
+                label.form__label(for='message') Message : 
+                textarea.form__textarea#message(rows='8' cols= '30')
+            .form__group
+                button.btn.btn--message.btn--block#message-multiple send message to all the users
+        form.form.form--user.form--edit
+            .form__group
+                label.form__label(for='role') Role :
+                input.form__input#role(placeholder='role...')
+            .form__group
+                button.btn.btn--edit.btn--block#edit-user-role edit
+        .users
+            .users__users
+                h1.users__header users
+                for user in users
+                    +accounts(user)
+            if admins
+                .users__admins
+                    h1.users__header admins
+                    for admin in admins
+                        +accounts(admin)
+                

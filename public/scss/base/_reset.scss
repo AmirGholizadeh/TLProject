@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    background: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: inherit;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    @media(max-width: 768px) {
+        font-size: 52.5%;
+    }
+    @media(max-width: 500px) {
+        font-size: 42.50%;
+    }
+    line-height: 1.7;
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--orangeCoral) no-repeat;
+    font-family: var(--font);
+    padding: 2rem;
+    position: relative;
+    @media(max-width: 768px) {
+        padding: 0;
+    }
+}

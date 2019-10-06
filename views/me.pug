@@ -1,0 +1,25 @@
+extends base
+
+block content
+    .container
+        .form.form--me
+            .form__group
+                label.form__label(for='username') Username : 
+                input.form__input#username(type='text' placeholder= user.name)
+            .form__group
+                label.form__label(for='email') Email : 
+                input.form__input#email(type='email' placeholder= user.email)
+            .form__group
+                button.btn.btn--edit.btn--block#detail Update
+            .divider.divider--horizontal 
+            .form__group
+                label.form__label(for='currentPassword') Current password : 
+                input.form__input#currentPassword(type='password' placeholder='current password...')
+            .form__group
+                label.form__label(for='password') New password : 
+                input.form__input#newPassword(type='password' placeholder='new password...')
+            .form__group
+                label.form__label(for='confirmPassword') Confirm new password : 
+                input.form__input#confirmPassword(type='password' placeholder='confirm password...')
+            .form__group
+                button.btn.btn--edit.btn--block#password Update

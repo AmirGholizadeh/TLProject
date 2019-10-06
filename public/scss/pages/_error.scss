@@ -1,0 +1,13 @@
+.error {
+    text-align: center;
+    &__header {
+        font-size: var(--font-two);
+        color: var(--gray);
+        font-weight: 300;
+    }
+    &__paragraph {
+        font-size: var(--font-four);
+        color: var(--gray-light);
+        font-weight: 700;
+    }
+}

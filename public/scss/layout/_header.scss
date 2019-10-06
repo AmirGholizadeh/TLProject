@@ -1,0 +1,46 @@
+.nav {
+    @include headerFooter(space-between);
+    margin-bottom: 20rem;
+    @media(max-width: 500px) {
+        margin-bottom: 10rem;
+        flex-direction: column;
+    }
+    &__navigation {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 0.5rem;
+    }
+    &__badge {
+        background: var(--primary-color-dark);
+        border-radius: 5px;
+        padding: 0.25rem 0.5rem;
+        font-size: var(--font-five);
+        color: var(--white);
+        font-weight: 700;
+    }
+    &__logo {
+        color: var(--primary-color-dark);
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: var(--font-two);
+        font-weight: 500;
+    }
+}

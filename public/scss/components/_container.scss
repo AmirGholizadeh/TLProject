@@ -1,0 +1,13 @@
+.container {
+    margin: 0 auto;
+    max-width: 140rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @media(max-width: 500px) {
+        flex-direction: column;
+    }
+}

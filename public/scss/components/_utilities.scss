@@ -1,0 +1,26 @@
+.pulse {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.divider {
+    background: var(--gray);
+    border-radius: 5px;
+    transform-origin: center;
+    &--horizontal {
+        margin: 4rem 0;
+        height: 5px;
+        width: 100%;
+        transform: scaleX(0.8);
+    }
+    &--vertical {
+        margin: 0 4rem;
+        height: 3rem;
+        width: 5px;
+        transform: scaleY(0.8);
+        @media(max-width: 768px) {
+            & {
+                display: none;
+            }
+        }
+    }
+}

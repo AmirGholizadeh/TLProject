@@ -1,0 +1,27 @@
+.alert {
+    &-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    z-index: 2;
+    box-shadow: 0 1rem 1.5rem var(--gray);
+    &--success {
+        background: var(--white);
+        color: var(--primary-color-dark);
+    }
+    &--fail {
+        background: var(--primary-color-dark);
+        color: var(--white);
+    }
+    &__paragraph {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+}

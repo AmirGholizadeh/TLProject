@@ -1,0 +1,28 @@
+mixin navigation(src, link,text,newM, logout)
+    if newM
+        li.nav__item.pulse
+            a.nav__link(href=`/${link}`)
+                img.nav__img(src=`/img/${src}.png`)
+                span.nav__badge= text
+    else
+        li.nav__item
+            a.nav__link(href=`/${link}`)
+                img.nav__img(src=`/img/${src}.png` id=`${logout === true ? 'logout' : ''}`)
+                span.nav__badge= text
+.container
+    nav.nav
+        a(href='/')
+            h1.nav__logo TL
+        if user
+            ul.nav__navigation
+                +navigation('logout','logout','logout' ,false, true)
+                - const username = user.name.split(' ')[0];
+                +navigation('user','me',`${username}`)
+                - const manadmin = user.role.startsWith('manager') || user.role.startsWith('admin')
+                if manadmin
+                    +navigation('users','users','users')
+                +navigation('messages','messages','messages', !user.messagesRead)
+        else
+            ul.nav__navigation
+                +navigation('login','login','login')
+                +navigation('signup','signup','signup')

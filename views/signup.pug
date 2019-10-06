@@ -1,0 +1,24 @@
+extends base
+block content
+    .container
+        if user
+            .error
+                h2.error__header Something went wrong!
+                p.error__paragraph You are already logged in!
+        else 
+            form.form.form--signup
+                h1.main__header Signup
+                .form__group
+                    label.form__label(for='username') Please enter your username 
+                    input.form__input(type='text' id='username')
+                .form__group
+                    label.form__label(for='password') Please enter your password 
+                    input.form__input(type='password' id='password')
+                .form__group
+                    label.form__label(for='passwordConfirm') Please confirm your password
+                    input.form__input(type='password' id='passwordConfirm')
+                .form__group
+                    label.form__label(for='email') Please enter email 
+                    input.form__input(type='email' id='email')
+                .form__group
+                    button.btn.btn--form.btn--block signup

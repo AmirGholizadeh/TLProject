@@ -1,0 +1,42 @@
+.messages {
+    padding: 1rem 2rem;
+    border-right: 5px solid var(--white);
+    box-shadow: 0 1rem 3rem var(--gray);
+    border-radius: 5px;
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-size: var(--font-one);
+        color: var(--gray);
+        font-weight: 300;
+    }
+    &__from {
+        font-size: var(--font-four);
+        color: var(--gray-light);
+    }
+    &__message {
+        font-size: var(--font-four);
+        font-weight: 700;
+        color: var(--gray);
+    }
+    &__new {
+        background: var(--primary-color-dark);
+        color: var(--white);
+        font-size: var(--font-five);
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+}

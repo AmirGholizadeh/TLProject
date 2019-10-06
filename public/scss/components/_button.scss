@@ -1,0 +1,55 @@
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0.3rem 1.5rem var(--gray);
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    color: var(--white);
+    &--form {
+        background: var(--gray);
+        font-size: 1.8rem;
+        &:hover {
+            transform: translateX(1rem);
+        }
+    }
+    &--edit {
+        background: var(--edit);
+        margin-right: 0.5rem;
+        font-size: 1.3rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+        @media(max-width:500px) {
+            & {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &--delete {
+        background: var(--delete);
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+        @media(max-width:500px) {
+            & {
+                margin: 0;
+            }
+        }
+    }
+    &--message {
+        background: var(--gray);
+        font-size: 1.3rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &--block {
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,30 @@
+extends base
+block content
+
+    .container
+        form.form.form--lt
+            .form__group.form__group--lt
+                input.form__input(type='text' id='name' placeholder='name..')
+            .form__group.form__group--lt
+                input.form__input(type='text' id='description' placeholder='description..')
+            .form__group.form__group--lt
+                input.form__input(type='text' id='time' placeholder='time..')
+            .form__group.form__group--lt
+                input.form__input(type='text' id='priority' placeholder='priority..')
+            .form__group.form__group--lt
+                button.btn.btn--form.btn--block Add
+        .tl
+            for todo in user.todos
+                .tl__container(id=`${todo._id}`)
+                    ul.tl__list
+                        li.tl__item
+                            span.tl__item--item= todo.name
+                            span.tl__item--description= todo.description
+                        li.divider.divider--vertical
+                        li.tl__item.tl__item--time= todo.time
+                        li.divider.divider--vertical
+                        li.tl__priority(class=`tl__priority--${todo.priority}`)= todo.priority
+                    .divider.divider--vertical
+                    .actions
+                        button.btn.btn--edit.edit-todo edit
+                        button.btn.btn--delete.delete-todo delete
